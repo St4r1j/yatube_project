@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
   <head>    
     <meta charset="utf-8">
@@ -18,16 +18,14 @@
     </title>
   </head>
   <body>
-    <header>
-      {% include "includes/header.html" %}
-    </header>
+    {% include "includes/header.html" %}
     <main> 
-      {% block content %}
-        <h1>Базовая страница</h1>
-      {% endblock content %}
+      <div class="container py-5"> 
+        {% block content %}
+          <h1>Базовая страница</h1>
+        {% endblock content %}
+      </div>
     </main>
-    <footer class="border-top text-center py-3">
-      {% include "includes/footer.html" %}
-    </footer>
+    {% include "includes/footer.html" %}
   </body>
 </html>
